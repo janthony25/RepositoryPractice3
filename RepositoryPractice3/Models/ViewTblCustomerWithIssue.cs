@@ -1,6 +1,6 @@
 ﻿namespace RepositoryPractice3.Models
 {
-    public class VewTblCustomerWithIssue
+    public class ViewTblCustomerWithIssue
     {
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }

@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RepositoryPractice3.Data;
 using RepositoryPractice3.Models;
+using RepositoryPractice3.Repository.Irepository;
 
 namespace RepositoryPractice3.Repository
 {
-    public class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly ApplicationDbContext _db;
         private DbSet<tblCustomer> CustomerEntity;
@@ -15,6 +16,6 @@ namespace RepositoryPractice3.Repository
             _db = db;
         }
 
-        public IEnumerable
+        public IEnumerable<ViewTblCustomerW>
     }
 }

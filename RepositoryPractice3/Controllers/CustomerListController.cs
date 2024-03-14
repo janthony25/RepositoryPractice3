@@ -15,5 +15,11 @@ namespace RepositoryPractice3.Controllers
             ViewBag.CustomerListWithIssue = _customerRepository.GetCustomer();
             return View();
         }
+
+        public IActionResult Create()
+        {
+            ViewBag.AddCustomer = 
+            return View();
+        }
     }
 }

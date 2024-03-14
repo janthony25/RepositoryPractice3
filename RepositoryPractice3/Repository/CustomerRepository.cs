@@ -14,12 +14,19 @@ namespace RepositoryPractice3.Repository
         public CustomerRepository(ApplicationDbContext db)
         {
             _db = db;
+            CustomerEntity = _db.Set<tblCustomer>();
+            IssueEntity = _db.Set<tblIssue>();
         }
 
         public IEnumerable<ViewTblCustomerWithIssue> GetCustomer()
         {
             var customerWithIssue = _db.Set<ViewTblCustomerWithIssue>();
             return customerWithIssue.AsEnumerable();
+        }
+
+        public void AddCustomer(tblCustomer entity)
+        {
+            CustomerEntity.Add(entity);
         }
     }
 }

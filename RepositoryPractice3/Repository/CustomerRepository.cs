@@ -16,6 +16,10 @@ namespace RepositoryPractice3.Repository
             _db = db;
         }
 
-        public IEnumerable<ViewTblCustomerW>
+        public IEnumerable<VewTblCustomerWithIssue> GetCustomer()
+        {
+            var customerWithIssue = _db.Set<VewTblCustomerWithIssue>();
+            return customerWithIssue.AsEnumerable();
+        }
     }
 }

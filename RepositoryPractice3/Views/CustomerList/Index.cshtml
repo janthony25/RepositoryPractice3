@@ -1,0 +1,25 @@
+﻿<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Customer Id</td>
+                <td>Customer Name</td>
+                <td>Promblem</td>
+                <td>Payment Status</td>
+                <td>Work Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in ViewBag.CustomerListWithIssue)
+            {
+                <tr>
+                    <td>@obj.CustomerId</td>
+                    <td>@obj.CustomerName</td>
+                    <td>@obj.Problem</td>
+                    <td>@obj.PaymentStatus</td>
+                    <td>@obj.WorkStatus</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
